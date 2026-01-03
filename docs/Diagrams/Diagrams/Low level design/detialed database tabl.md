@@ -94,3 +94,25 @@
 ---
 
 # 9️⃣ Ticket Table
+| Column       | Type    | Key                     | Notes                    |
+| ------------ | ------- | ----------------------- | ------------------------ |
+| ticketId     | INT     | PK                      | Unique ticket ID         |
+| bookingId    | INT     | FK → Booking(bookingId) | Booking linked to ticket |
+| ticketNumber | VARCHAR |                         | Unique ticket code       |
+| qrCode       | VARCHAR |                         | QR code value            |
+| issueDate    | DATE    |                         | Ticket issue date        |
+| isValidated  | BOOLEAN |                         | Validated at boarding    |
+
+---
+
+# 🔟 AIChatbot Table *(Optional / Logs)*
+
+| Column    | Type     | Key               | Notes                     |
+| --------- | -------- | ----------------- | ------------------------- |
+| chatbotId | INT      | PK                | Unique bot session ID     |
+| userId    | INT      | FK → User(userId) | User interacting with bot |
+| botName   | VARCHAR  |                   | Bot instance name         |
+| language  | VARCHAR  |                   | e.g., EN, AM              |
+| status    | VARCHAR  |                   | Active / Closed           |
+| message   | TEXT     |                   | Message sent/received     |
+| timestamp | DATETIME |                   | Chat timestamp            |
