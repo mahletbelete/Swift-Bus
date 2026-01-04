@@ -48,3 +48,46 @@ if(!seat.isAvailable()) {
 **Implementation:**
 - Use logging frameworks (e.g., Log4j in Java) to log errors.
 - Gracefully terminate processes if critical errors occur.
+
+
+---
+
+# 2. Validation in Your System
+
+Validation ensures that user input or system data is correct before processing. This reduces errors and improves data integrity.
+
+## A. Input Validation
+
+- **User Inputs:** Check email format, password strength, phone number format.
+- **Booking Inputs:** Validate seat numbers, payment details, and route IDs.
+- **Payment Inputs:** Check that amount is positive, payment method is valid, and date is correct.
+
+**Example (Java):**
+```java
+public boolean validateEmail(String email) {
+    return email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
+}
+
+public boolean validatePaymentAmount(double amount) {
+    return amount > 0;
+}
+```
+
+## B. Business Logic Validation
+
+- Prevent users from booking more than one seat per ticket if the rules disallow it.
+- Ensure only admins can create or delete routes and buses.
+- Validate ticket status before generating or canceling tickets.
+
+**Example:**
+```java
+if(ticket.isValidated()) {
+    throw new InvalidOperationException("Ticket is already validated.");
+}
+```
+
+## C. Cross-Class Validation
+
+When booking, ensure:
+- Seat belongs to the selected bus.
+- Bus operates on the selected route.
