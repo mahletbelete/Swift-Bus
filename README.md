@@ -11,7 +11,7 @@
 | Mahlet Belete            | 4187/16  | [@mahletbelete](https://github.com/mahletbelete) |
 | Hanamariam Sebsebew      | 0977/16  | [@hanamariam1dev](https://github.com/hanamariam1dev) |
 | Wubet Lema               | 2027/16  | [wubetlema](https://github.com/wubetlema) |
-| Mubarek Ali              | 1447/16  | -                    |
+| Mubarek Ali              | 1447/16  | [@mubarek370](https://github.com/mubarek370) |                   |
 | Ezedin Mohamed           | 0772/16  | [ezedinmoh](https://github.com/ezedinmoh) |
 
 ---
